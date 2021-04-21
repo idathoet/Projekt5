@@ -1,38 +1,271 @@
-﻿<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="utf-8">
+﻿<!DOCTYPE html>
+<html lang ="da">
+  <head>
+    <meta charset="utf-8" />
     <title>Flora . Tea Made With Love</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script charset="utf-8" src="js/flora.js"></script>
-    <link rel="stylesheet" href="css/flora.css">
-</head>
-<body>
-    <h1>Hello!</h1>
-    <div class="container">
-        <div class="header">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="flora.css" />
+    <script src="flora.js" defer></script>
+    <!-- Adobe font -->
+    <link rel="stylesheet" href="https://use.typekit.net/juv1frk.css" />
+  </head>
+  <body>
+      <!-- Header starter her -->
+      <!-- LANDINGPAGE -->
+      <header>
+          <nav class="navbar">
+              <img src="images/logo.png" class="logo" alt= "Flora logo">
+              <ul>
+                  <li>
+                      <a id="forside" class="active" tabindex="0" href="#/">Forside</a>
+                  </li>
+                  <li><a id="menu" tabindex="0">Menu</a></li>
+                  <li><a id="tilbud" tabindex="0">Tilbud</a></li>
+                  <li><a id="galleri" tabindex="0">Galleri</a></li>
+                  <li><a id="anmeldelse" tabindex="0">Anmeldelse</a></li>
+                  <li><a id="kontakt" tabindex="0">Kontakt</a></li>
+              </ul>
+          </nav>
+          <div class="hero" id="Forside-target">
+              <div class="hero-content">
+                  <h1>Tea made with love</h1>
+                  <p class="Lead">
+                      På mine rejser i Asien oplevede jeg kulturen og glæden ved Bubble Tea, og dette gav mig idéen til dele den med andre.
+                      <br>Flora er den perfekte kulmination af asiatisk kultur og dansk hygge.
+                  </p>
+              </div>
+              <div class="arrow-down-container">
+                  <a id="pil" class="arrow-down">
+                  </a>
+              </div>
+          </div>
+      </header>
 
-        </div>
+      <!-- Main starter her -->
+      <main>
 
-        <div class="menu">
-                <ul id="nav"> 
-                    <li>menu item</li>  
-                    <li>menu item</li> 
-                    <li>menu item</li>  
-                    <li>menu item</li> 
-                    <li>menu item</li>  
-                    <li>menu item</li> 
-                </ul> 
-            </div>
+          <!-- Video -->
+          <section class="light" id="video-target">
+              <div id="video_player_box">
+                  <video id="FloraVideo" width="1000 px" height="700 px" controls loop autoplay muted>
+                      <source src="BrownSugarAd.mp4" >
+                  </video>
+              </div>
+          </section>
 
-            <div class="body">
+          <!--- MENUKORT -->
+          <section class="dark" id="menu-target">
+              <h2>Menu</h2>
+              <div class="container1">
+                  <img src="menukort-top.png" alt="Menukort til Bubble Tea" ><br>
+                  <img src="menukort-bund.png" alt="Mix'n'match Bubble Tea" >
+              </div>
+          </section>
 
-                </div>
-            </div>
-</body>
-    <footer>
-        <div class="footer">
-            <b></b>
-        </div>
-    </footer>
+          <!--- TILBUD -->
+          <section class="light" id="tilbud-target">
+              <h2>Tilbud</h2>
+              <div class="container2">
+                  <img src="tilbud.png" alt="Flora kampagner og tilbud" />
+              </div>
+          </section>
+
+          <!-- GALLERI -->
+          <section class="dark" id="galleri-target">
+              <h2>Galleri</h2>
+              <p class="lead">
+                  <!---Billeder til galleri-->
+                  <div class="row">
+                      <div class="col">
+                          <div class="content">
+                              <img src="cafe.jpeg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="Facaden på Flora" />
+                          </div>
+                      </div>
+
+                      <div class="col">
+                          <div class="content">
+                              <img src="teas1.jpg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="Et lille udpluk af sortimentet" />
+                          </div>
+                      </div>
+                      <br>
+                      <div class="col">
+                          <div class="content">
+                              <img src="servering.png" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="Bubble Tea bliver mixet - her ses Tapioca boblerne" />
+                          </div>
+                      </div>
+
+                      <div class="col">
+                          <div class="content">
+                              <img src="danny.jpeg" onclick="openLightbox();toSlide(4)" class="hover-shadow preview" alt="Danny, ejeren af Flora" />
+                          </div>
+                      </div>
+
+                      <div class="col">
+                          <div class="content">
+                              <img src="falles1.jpg" onclick="openLightbox();toSlide(5)" class="hover-shadow preview" alt="Et lille udpluk af sortimentet" />
+                          </div>
+                      </div>
+
+                      <div class="col">
+                          <div class="content">
+                              <img src="falles2.jpg" onclick="openLightbox();toSlide(6)" class="hover-shadow preview" alt="Et lille udpluk af sortimentet" />
+                          </div>
+                      </div>
+
+                      <div class="col">
+                          <div class="content">
+                              <img src="falles5.jpg" onclick="openLightbox();toSlide(7)" class="hover-shadow preview" alt="Et lille udpluk af sortimentet" />
+                          </div>
+                      </div>
+
+                      <div class="col">
+                          <div class="content">
+                              <img src="butterflylemontea.jpg" onclick="openLightbox();toSlide(8)" class="hover-shadow preview" alt="Butterfly Lemon Tea bubble tea fra Flora Bubble Tea" />
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <!---Lightbox effekt-->
+
+                  <div id="Lightbox" class="modal">
+                      <span class="close pointer" onclick="closeLightbox()">&times;</span>
+                      <div class="modal-content">
+                          <div class="slide">
+                              <img src="cafe.jpeg" class="image-slide" alt= "cafe" />
+                          </div>
+
+                          <div class="slide">
+                              <img src="teas1.jpg" class="image-slide" alt= "teas" />
+                          </div>
+
+                          <div class="slide">
+                              <img src="servering.png" class="image-slide" alt= "servering"/>
+                          </div>
+
+                          <div class="slide">
+                              <img src="teas1.jpg" class="image-slide" alt= "teas1"/>
+                          </div>
+
+                          <div class="slide">
+                              <img src="danny.jpeg" class="image-slide" alt= "danny" />
+                          </div>
+
+                          <div class="slide">
+                              <img src="falles2.jpg" class="image-slide" alt= "falles2"/>
+                          </div>
+
+                          <div class="slide">
+                              <img src="falles5.jpg" class="image-slide" alt= "falles5"/>
+                          </div>
+
+                          <div class="slide">
+                              <img src="butterflylemontea.jpg" class="image-slide" alt= "butterflylemontea"/>
+                          </div>
+                      </div>
+                  </div>
+              <br>
+          </section>
+
+          <!-- ANMELDELSE -->
+          <section class="light" id="anmeldelse-target">
+              <h2>Anmeldelse</h2>
+              <p class="lead">
+                  <!-- slideshow container -->
+                  <div class="slideshow-container">
+
+                      <!--full-width image-->
+                      <div class="mySlides fade">
+                          <div class="numbertext"> 1 / 4</div>
+                          <img src="images/ditte.png" alt="Ditte" style="width:100%;">
+                      </div>
+
+                      <div class="mySlides fade">
+                          <div class="numbertext"> 2 / 4</div>
+                          <img src="images/emil.png" alt= "Emil" style="width:100%;" />
+                      </div>
+
+                      <div class="mySlides fade">
+                          <div class="numbertext"> 3 / 4</div>
+                          <img src="images/madeleine.png" alt= "Madeleine" style="width:100%;" />
+                      </div>
+
+                      <div class="mySlides fade">
+                          <div class="numbertext"> 4 / 4</div>
+                          <img src="images/maria.png" alt= "Maria" style="width:100%;"/>
+                      </div>
+                      <br>
+
+                      <!-- Prikkerne -->
+                      <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1) "></span>
+                          <span class="dot" onclick="currentSlide(2) "></span>
+                          <span class="dot" onclick="currentSlide(3) "></span>
+                          <span class="dot" onclick="currentSlide(4) "></span>
+                      </div>
+                  </div>
+              <br>
+          </section>
+
+          <!--KONTAKTFORMULAREN -->
+          <section class="dark" id="kontakt-target">
+              <h2>Kontakt</h2>
+              <class = "lead" >
+                  <div class="wrapper">
+                      <h3>Kontakt os</h3>
+                      <div id="error_message"></div>
+
+                      <form id="myform" onsubmit="return validation()">
+                          <div class="input_field">
+                              <input type="text" placeholder="Navn" id="fname">
+                          </div>
+                          <div class="input_field">
+                              <input type="text" placeholder="Efternavn" id="lname">
+                          </div>
+                          <div class="input_field">
+                              <input type="text" placeholder="Email" id="email">
+                          </div>
+                          <div class="input_field">
+                              <textarea id="message" placeholder="Besked"></textarea>
+                          </div>
+                          <div class="btn">
+                              <input type="submit">
+                          </div>
+                          <div class="map">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4531.56977155412!2d10.383774888360598!3d55.39665885824384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464cdff843b191f9%3A0xe0a77c68d75d7d48!2sVestergade%2017%2C%205000%20Odense!5e0!3m2!1sda!2sdk!4v1618438885020!5m2!1sda!2sdk" width="600" height="385" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                          </div>
+                      </form>
+                  </div>
+          </section>
+
+          <!-- Footer starter her -->
+          <footer>
+              <div class="footer" id="footer">
+                  <div class="container">
+                      <div class="row">
+                          <div class=footer-col>
+                              <h2>Visit Flora</h2>
+                              <ul>
+                                  <li><img src="Kort.png" alt="Kort ikon"> Vestergade 17, 5000 Odense C</li>
+                                  <br>
+                                  <li><img src="Telefon.png" alt="Telefon ikon">(+45) 51 93 57 95</li>
+                                  <br>
+                                  <li><img src="Email.png" alt="Email ikon"> flora.tea.odense@gmail.com</li>
+                              </ul>
+                            <br>
+                          </div>
+
+                          <div class=footer-col>
+                              <h2>Follow us</h2>
+                              <div class="social-links">
+                                  <li><a href="https://www.instagram.com/florateaorg/?hl=da"><img src="Instagram.png" alt="Instagram logo"></a></li>
+                                  <li><a href="https://www.facebook.com/flora.tea.org"><img src="Facebook.png" alt="Facebook logo"></a></li>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+      </main>
+  </body>
 </html>
